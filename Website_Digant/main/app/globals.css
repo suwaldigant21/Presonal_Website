@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #121212;
+  --background: #f6f0cf;
+  --card-bg: #ffffff;
+  --card-fg: #121212;
+  --muted-fg: #71717a;
+  --border-color: #e5e5e5;
+  --accent: #9333ea;
+}
+
+.dark {
+  --foreground: #ffffff;
+  --background: #121212;
+  --card-bg: #1e1e1e;
+  --card-fg: #ffffff;
+  --muted-fg: #a1a1aa;
+  --border-color: #333333;
+  --accent: #9333ea;
+}
+
+body {
+  @apply font-sans;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.8s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
